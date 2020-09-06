@@ -48,6 +48,11 @@ namespace Snake
                     break;
             }
         }
+
+        public bool IsMatch(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
         public void Draw()
         {
             Console.SetCursorPosition(x, y);

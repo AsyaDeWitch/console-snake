@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Snake
@@ -58,6 +59,19 @@ namespace Snake
                     direction = Direction.UP;
                     break;
             }
+        }
+
+        public bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsMatch(food))
+            {
+                food.symb = head.symb;
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
