@@ -6,7 +6,9 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Point p1 = new Point();
         }
+
+      
     }
 }
